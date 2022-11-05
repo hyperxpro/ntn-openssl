@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-      	  distribution: 'corretto'
-    	  java-version: '8'
+          distribution: 'corretto'
+          java-version: '8'
       - name: Run
-    	run: mvn install -pl :netty-tcnative-openssl-static
+        run: mvn install -pl :netty-tcnative-openssl-static
 
