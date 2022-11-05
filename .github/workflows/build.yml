@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'GitHub Actions'
+        required: true
+        default: 'GitHub Actions'
+
+jobs:
+  JDK17:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+        with:
+      	  distribution: 'corretto'
+    	  java-version: '8'
+      - name: Run
+    	run: mvn install -pl :netty-tcnative-openssl-static
+
