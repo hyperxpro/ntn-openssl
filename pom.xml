@@ -84,16 +84,6 @@
     <nativeLibOsParts>${os.detected.name}_${os.detected.arch}</nativeLibOsParts>
     <aprVersion>1.7.0</aprVersion>
     <aprSha256>48e9dbf45ae3fdc7b491259ffb6ccf7d63049ffacbc1c0977cced095e4c2d5a2</aprSha256>
-    <boringsslBranch>chromium-stable</boringsslBranch>
-    <!--
-      See https://boringssl.googlesource.com/boringssl/+/refs/heads/chromium-stable for the latest commit
-    -->
-    <boringsslCommitSha>3a667d10e94186fd503966f5638e134fe9fb4080</boringsslCommitSha>
-    <libresslVersion>3.4.3</libresslVersion>
-    <!--
-      See https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/SHA256 for the SHA256 signature
-    -->
-    <libresslSha256>ff88bffe354818b3ccf545e3cafe454c5031c7a77217074f533271d63c37f08d</libresslSha256>
     <opensslMinorVersion>1.1.1</opensslMinorVersion>
     <opensslPatchVersion>q</opensslPatchVersion>
     <opensslVersion>${opensslMinorVersion}${opensslPatchVersion}</opensslVersion>
@@ -789,7 +779,7 @@
         <!-- When doing a release we only want to deploy dynamic openssl version and the static boring one. -->
         <module>openssl-classes</module>
         <module>openssl-dynamic</module>
-        <module>boringssl-static</module>
+        <module>openssl-static</module>
       </modules>
     </profile>
 
@@ -799,7 +789,7 @@
         <!-- When stage we only want to deploy dynamic openssl version and the static boring one. -->
         <module>openssl-classes</module>
         <module>openssl-dynamic</module>
-        <module>boringssl-static</module>
+        <module>openssl-static</module>
       </modules>
     </profile>
 
@@ -818,8 +808,6 @@
         <module>openssl-classes</module>
         <module>openssl-dynamic</module>
         <module>openssl-static</module>
-        <module>boringssl-static</module>
-        <module>libressl-static</module>
       </modules>
     </profile>
 
