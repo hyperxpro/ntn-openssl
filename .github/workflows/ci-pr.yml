@@ -83,9 +83,7 @@ jobs:
           arch: x86_amd64
 
       - name: Install tools
-        uses: crazy-max/ghaction-chocolatey@v1
-        with:
-          args: install ninja nasm
+        uses: ilammy/setup-nasm@v1
 
       # Cache .m2/repository
       - uses: actions/cache@v2
