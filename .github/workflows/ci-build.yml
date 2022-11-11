@@ -101,9 +101,6 @@ jobs:
         run: ./mvnw.cmd --file pom.xml -am -pl openssl-static clean package
 
       - uses: actions/upload-artifact@v2
-        if: ${{ failure() }}
         with:
           name: build-windows-target
-          path: |
-            **/target/surefire-reports/
-            **/hs_err*.log
+          path: D:\a\Brotli4j\
